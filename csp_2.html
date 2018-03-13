@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <style type="text/css">
+    html,
+    body {
+      height: 100%;
+    }
+
+    body {
+      background-image: url(images/home.jpg);
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      background-size: cover;
+    }
+  </style>
+  <meta charset="utf-8">
+  <title>Home</title>
+</head>
+<img src="images/images.png" height="250">
+<br>
+
+<body>
+  <a href="index.html">Home</a>
+  <br>
+  <a href="portfolio.html">Portfolio</a>
+  <br>
+  <a href="csp_2.html">Something...</a>
+  <br><br><br>
+  <a href="https://kahoot.it">YAY! Kahoot!</a>
+  <br>
+  <a href="Javathing.html">Java</a>
+  <br>
+  <a href="https://scratch.mit.edu/projects/175594144/" target="_blank">scratch!</a>
+  <br>
+  <a href="files/attempt1.aia">See my app!</a>
+  <br>
+  <a href="files/mastermind.py">My other python project!</a>
+  <br>
+  <left>This is my AP project so far!</left>
+  <br><br>
+  <a href="files/3d printing.pdf">Document</a>
+  <br>
+  <a href="files/OTHER 3d printing.pdf">And the artifact</a>
+  <br>
+  <a href="https://repl.it/@mcgdmaster/PresentSeriousIbadanmalimbe">Logan's stuff</a>
+  <br>
+  <a href="https://scratch.mit.edu/projects/201758967/" target="_blank">My newest Scratch project</a>
+  <br>
+  <a href="files/AP Computer Science.pdf" target="_blank">This is part of my AP project for the Scratch program I made</a>
+  <script type="text/javascript">
+    var currentTime = new Date();
+    var hours = currentTime.getHours();
+    var minutes = currentTime.getMinutes();
+    var seconds = currentTime.getSeconds();
+    var suffix = "AM"; // use AM by default
+
+    if (minutes < 10)
+      minutes = "0" + minutes;
+
+    if (seconds < 10)
+      seconds = "0" + minutes
+
+    if (hours >= 12) {
+      suffix = "PM";
+      hours = hours - 12;
+    }
+    if (hours == 0) {
+      hours = 12;
+    }
+
+    document.write("<b><div id='d1'>" + hours + ":" +
+      minutes + ":" + seconds + " " + suffix + "</div></b>");
+
+    function hideElement(id_attribute_value) {
+      if (document.getElementById &&
+        document.getElementById(id_attribute_value) &&
+        document.getElementById(id_attribute_value).style
+      ) {
+        document.getElementById(id_attribute_value).style.visibility = "hidden";
+      };
+    }
+
+    function startTime() {
+      var today = new Date();
+      var h = today.getHours();
+      var m = today.getMinutes();
+      var s = today.getSeconds();
+      m = checkTime(m);
+      s = checkTime(s);
+      document.getElementById('txt').innerHTML =
+        h + ":" + m + ":" + s;
+      var t = setTimeout(startTime, 500);
+
+    }
+
+    function checkTime(i) {
+      if (i < 10) { i = "0" + i }; // add zero in front of numbers < 10
+      return i;
+    }
+  </script>
+
+  <body onload="startTime()">
+    <div id="txt"></div>
+  </body>
+</body>
+<center>Hey! The second page!</center>
+
+
+</html>
